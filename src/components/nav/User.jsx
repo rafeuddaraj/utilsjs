@@ -19,7 +19,7 @@ export default function User() {
         </p>
         <img
           src={user?.photoURL || Icon}
-          alt={user?.displayName.split("")[0] || "u"}
+          alt={user?.displayName?.split("")[0] || "u"}
           width={50}
           height={50}
           className={`${
