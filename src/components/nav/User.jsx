@@ -7,7 +7,7 @@ export default function User() {
   const { active, handleIsActive } = useActive();
   const name = user?.displayName?.split(" ");
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <div
         className="flex gap-3 cursor-pointer justify-center items-center font-thin"
         onClick={() => {
@@ -28,7 +28,7 @@ export default function User() {
         />
       </div>
       <div
-        className={`absolute text-[1rem] flex flex-col right-0 top-16  gap-2 shadow-2xl rounded-lg backdrop-blur-xl bg-white shadow-pink-500/60 duration-200  p-4 w-full ${
+        className={`absolute text-[1rem] flex flex-col right-0 top-16   gap-2 shadow-2xl rounded-lg setIndex bg-white shadow-pink-500/60 duration-200  p-4 w-full ${
           active ? "translate-y-[.15rem]" : "-translate-y-56"
         }`}
       >
