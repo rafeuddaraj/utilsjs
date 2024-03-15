@@ -15,7 +15,7 @@ export default function User() {
         }}
       >
         <p className="text-lg p-2 tracking-wider text-pink-800">
-          {(name && name[name?.length - 1]) || user.email}
+          {(name && name[name?.length - 1]) || user?.email}
         </p>
         <img
           src={user?.photoURL || Icon}

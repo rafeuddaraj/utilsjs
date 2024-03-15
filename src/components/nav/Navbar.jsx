@@ -1,10 +1,10 @@
-import LinkList from "./nav/LinkList";
-import Logo from "./nav/Logo";
-import User from "./nav/User";
+import LinkList from "./LinkList";
+import Logo from "../nav/Logo";
+import User from "./User";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between h-[4.5rem]  backdrop-blur-md first-letter: text-2xl px-52 items-center shadow-xl shadow-red-950/10">
+    <div className="flex justify-between h-[4.5rem]  backdrop-blur-md first-letter: text-2xl px-52 items-center shadow-xl shadow-red-950/10 fixed w-full z-50">
       <section className="">
         <Logo />
       </section>

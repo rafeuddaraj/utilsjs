@@ -1,17 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Registration from "./components/Registration";
-import PublicRoute from "./components/PublicRoute";
-import PrivateRoute from "./components/PrivateRoute";
-import Layout from "./components/Layout";
-import PageLayout from "./components/page/PageLayout";
+import Home from "./components/page/Home";
+import Layout from "./components/common/Layout";
+import Login from "./components/page/Login";
+import PageNotFound from "./components/page/PageNotFound";
+import PrivateRoute from "./components/route/PrivateRoute";
+import PublicRoute from "./components/route/PublicRoute";
+import Registration from "./components/page/Registration";
+import Blog from "./components/page/Blog";
 import Components from "./components/page/Components";
 import Hooks from "./components/page/Hooks";
-import Utils from "./components/page/Utils";
-import Blog from "./components/page/Blog";
+import PageLayout from "./components/page/PageLayout";
 import Tools from "./components/page/Tools";
-import PageNotFound from "./components/PageNotFound";
+import Utils from "./components/page/Utils";
+import SingleHooks from "./components/post/SinglePost";
 
 function App() {
   return (
@@ -23,18 +24,21 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/registration" element={<Registration />} />
           </Route>
-          <Route element={<PrivateRoute />}>
-            <Route element={<Layout />}>
-              <Route path="/" element={<Home />} exact />
-              <Route element={<PageLayout />}>
-                <Route path="/components" element={<Components />} />
-                <Route path="/hooks" element={<Hooks />} />
-                <Route path="/utils" element={<Utils />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/tools" element={<Tools />} />
-              </Route>
+          {/* <Route element={<PrivateRoute />}> */}
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} exact />
+            <Route element={<PageLayout />}>
+              <Route path="/components" element={<Components />} />
+              <Route path="/hooks" element={<Hooks />} />
+              <Route path="/hooks/:name" element={<SingleHooks />} />
+              <Route path="/utils" element={<Utils />} />
+              <Route path="/utils/:name" element={<SingleHooks />} />
+              <Route path="/tools" element={<Tools />} />
+              <Route path="/tools/:name" element={<SingleHooks />} />
             </Route>
+            <Route path="/blog" element={<Blog />} />
           </Route>
+          {/* </Route> */}
         </Routes>
       </BrowserRouter>
     </>

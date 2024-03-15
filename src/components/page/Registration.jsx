@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import RegSvg from "../assets/Sign up-bro.svg";
-import RotatingTitle from "./Title";
+import RegSvg from "../../assets/Sign up-bro.svg";
+import RotatingTitle from "../nav/Title";
 import { useForm } from "react-hook-form";
-import { loginWithSocial, signUp } from "../../firebase";
+import { loginWithSocial, signUp } from "../../../firebase";
 export default function Registration() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });

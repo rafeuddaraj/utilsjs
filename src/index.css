@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer {
+  ul {
+    @apply space-y-2;
+  }
+}
 .error {
   color: red;
   padding: 5px;

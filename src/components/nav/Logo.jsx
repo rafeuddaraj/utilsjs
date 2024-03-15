@@ -1,5 +1,5 @@
 import React from "react";
-import RotatingTitle from "../Title";
+import RotatingTitle from "./Title";
 
 export default function Logo() {
   return (

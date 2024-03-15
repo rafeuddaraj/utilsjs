@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../nav/Navbar";
+import Footer from "../nav/Footer";
 
 export default function Layout() {
   return (
@@ -10,10 +10,10 @@ export default function Layout() {
         <Navbar />
       </nav>
 
-      <main className="min-h-[90vh]">
+      <main className="min-h-[90vh] mt-16">
         <Outlet />
       </main>
-      <footer>
+      <footer className="bg-pink w-full">
         <Footer />
       </footer>
     </div>

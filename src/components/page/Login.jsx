@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import LoginSvg from "../assets/Tablet login-bro.svg";
-import RotatingTitle from "./Title";
+import LoginSvg from "../../assets/Tablet login-bro.svg";
+import RotatingTitle from "../nav/Title";
 import { useForm } from "react-hook-form";
-import { loginWithEmail, loginWithSocial } from "../../firebase";
+import { loginWithEmail, loginWithSocial } from "../../../firebase";
 export default function Login() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });

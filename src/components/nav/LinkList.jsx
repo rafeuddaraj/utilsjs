@@ -10,27 +10,29 @@ export default function LinkList() {
         <li className={location.pathname === "/" ? "active" : ""}>home</li>
       </Link>
       <Link to={"/components"}>
-        <li className={location.pathname === "/components" ? "active" : ""}>
+        <li className={location.pathname.match("/components") ? "active" : ""}>
           components
         </li>
       </Link>
       <Link to={"/hooks"}>
-        <li className={location.pathname === "/hooks" ? "active" : ""}>
+        <li className={location.pathname.match("/hooks") ? "active" : ""}>
           hooks
         </li>
       </Link>
       <Link to={"/utils"}>
-        <li className={location.pathname === "/utils" ? "active" : ""}>
+        <li className={location.pathname.match("/utils") ? "active" : ""}>
           utils
         </li>
       </Link>
       <Link to={"/tools"}>
-        <li className={location.pathname === "/tools" ? "active" : ""}>
+        <li className={location.pathname.match("/tools") ? "active" : ""}>
           tools
         </li>
       </Link>
       <Link to={"/blog"}>
-        <li className={location.pathname === "/blog" ? "active" : ""}>blog</li>
+        <li className={location.pathname.match("/blog") ? "active" : ""}>
+          blog
+        </li>
       </Link>
     </>
   );
