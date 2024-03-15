@@ -1,10 +1,15 @@
 import LinkList from "./LinkList";
 import Logo from "../nav/Logo";
 import User from "./User";
+import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../../firebase";
 
 export default function Navbar() {
+  const [user, loading, error] = useAuthState(auth);
+
   return (
-    <div className="flex justify-between h-[4.5rem]  backdrop-blur-md first-letter: text-2xl px-52 items-center shadow-xl shadow-red-950/10 fixed w-full z-50">
+    <div className="flex justify-between h-[4.5rem]  backdrop-blur-md first-letter: text-lg px-52 items-center shadow-xl shadow-red-950/10 fixed w-full z-50">
       <section className="">
         <Logo />
       </section>
@@ -13,7 +18,7 @@ export default function Navbar() {
           <LinkList />
         </section>
         <section className="">
-          <User />
+          {user ? <User /> : <Link to={"/login"}>Login</Link>}
         </section>
       </div>
     </div>

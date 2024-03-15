@@ -37,7 +37,7 @@ export default function Login() {
     }
   };
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
+    <div className=" bg-gray-100 text-gray-900 flex justify-center">
       <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
         <div
           className="flex-1 bg-indigo-100 text-center hidden lg:flex"
@@ -68,12 +68,6 @@ export default function Login() {
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
           }}
         >
-          <div className="text-center">
-            {/* <h1 className="relative text-3xl xl:text-4xl font-extralight text-emerald-400  tracking-[1rem]">
-              utilsJs
-            </h1> */}
-            <RotatingTitle />
-          </div>
           <div className="flex flex-col items-center">
             <h1 className="text-2xl xl:text-3xl font-extrabold">Login</h1>
             <div className="w-full flex-1 mt-8">

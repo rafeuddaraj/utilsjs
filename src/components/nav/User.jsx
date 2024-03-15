@@ -28,7 +28,7 @@ export default function User() {
         />
       </div>
       <div
-        className={`absolute text-[1rem] flex flex-col right-0 top-16   gap-2 shadow-2xl rounded-lg setIndex bg-white shadow-pink-500/60 duration-200  p-4 w-full ${
+        className={`absolute text-[1rem] flex flex-col right-0 top-16   gap-2 shadow-2xl rounded-lg setIndex bg-white shadow-pink-500/60 duration-200  p-4 w-36 ${
           active ? "translate-y-[.15rem]" : "-translate-y-56"
         }`}
       >

@@ -44,7 +44,7 @@ export default function Registration() {
 
   // console.log(data);
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
+    <div className=" bg-gray-100 text-gray-900 flex justify-center">
       <div
         className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1"
         ref={ref}
@@ -57,9 +57,6 @@ export default function Registration() {
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
           }}
         >
-          <div className="text-center">
-            <RotatingTitle />
-          </div>
           <div className="mt-12 flex flex-col items-center">
             <h1 className="text-2xl xl:text-3xl font-extrabold">Sign up</h1>
             <div className="w-full flex-1 mt-8">
@@ -199,7 +196,7 @@ export default function Registration() {
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
           }}
         >
-          <div className="m-12 xl:m-16 w-full">
+          <div className=" xl:m-16 w-full">
             <img
               // src="https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg"
               alt=""

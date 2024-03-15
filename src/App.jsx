@@ -19,13 +19,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<PageNotFound />} />
-          <Route element={<PublicRoute />}>
-            <Route path="/login" element={<Login />} />
-            <Route path="/registration" element={<Registration />} />
-          </Route>
-          {/* <Route element={<PrivateRoute />}> */}
           <Route element={<Layout />}>
+            <Route path="*" element={<PageNotFound />} />
+            <Route element={<PublicRoute />}>
+              <Route path="/login" element={<Login />} />
+              <Route path="/registration" element={<Registration />} />
+            </Route>
             <Route path="/" element={<Home />} exact />
             <Route element={<PageLayout />}>
               <Route path="/components" element={<Components />} />
@@ -38,7 +37,6 @@ function App() {
             </Route>
             <Route path="/blog" element={<Blog />} />
           </Route>
-          {/* </Route> */}
         </Routes>
       </BrowserRouter>
     </>
